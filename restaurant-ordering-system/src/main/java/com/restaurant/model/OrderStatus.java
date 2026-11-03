@@ -1,13 +1,11 @@
 package com.restaurant.model;
-
 public enum OrderStatus {
     NEW,
-    PLACED,
-    PREPARING,
+    COOKING,
     READY,
     DELIVERED;
-
-    public OrderStatus next() {
-        return this == DELIVERED ? this : values()[ordinal() + 1];
+    public OrderStatus next(){
+        if(this==DELIVERED)return DELIVERED;
+        return values()[ordinal()+1];
     }
 }
