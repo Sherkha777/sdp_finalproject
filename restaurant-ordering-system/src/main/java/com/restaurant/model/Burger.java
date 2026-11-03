@@ -1,13 +1,6 @@
 package com.restaurant.model;
-
-public class Burger implements Meal {
-    @Override
-    public String getName() {
-        return "Beef Burger";
-    }
-
-    @Override
-    public int getPrice() {
-        return 2800;
+public class Burger extends BaseMeal {
+    public Burger(){
+        super("Burger","Beef burger",2800);
     }
 }
